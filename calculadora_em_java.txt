@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("CALCULADORA");
+
+    System.out.println("1 - somar");
+    System.out.println("2 - subtrair");
+    System.out.println("3 - multiplicar");
+    System.out.println("4 - dividir");
+    // System.out.println("5 - sair");
+
+    System.out.print("Digite uma opção: ");
+    String opcaoEntrada = input.nextLine();
+
+    String entradaUsuario;
+    int numero1;
+    int numero2;
+    int resultado = 0;
+
+    System.out.print("Digite o primeiro valor: ");
+    entradaUsuario = input.nextLine();
+    numero1 = Integer.parseInt(entradaUsuario); 
+
+    System.out.print("Digite o segundo valor: ");
+    entradaUsuario = input.nextLine();
+    numero2 = Integer.parseInt(entradaUsuario); 
+
+    switch(opcaoEntrada){
+      case "1":
+        resultado = numero1 + numero2;
+        break;
+
+      case "2":
+        resultado = numero1 - numero2;
+        break;
+        
+      case "3":
+        resultado = numero1 * numero2;
+        break;
+      case "4":
+        resultado = numero1 / numero2;
+        break;
+      default:
+        System.out.println("Opção invalida");
+        break;
+    }
+    
+    System.out.println("Resultado: " + resultado);
+
+  }
+
+
+}
